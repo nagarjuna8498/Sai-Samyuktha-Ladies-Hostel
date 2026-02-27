@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Samyuktha Ladies Hostel – Premium Women's Accommodation in Nellore</title>
+<meta name="description" content="Sai Samyuktha Ladies Hostel – Safe, hygienic, premium accommodation for women students and working professionals in LIC Colony, Harinathpuram, Nellore, AP.">
+<meta name="keywords" content="ladies hostel Nellore, PG for women Nellore, working women hostel Nellore, girls hostel Nellore, student accommodation Nellore">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --primary: #5B5FEF;
+    --primary-dark: #4245c7;
+    --teal: #00BFA6;
+    --teal-dark: #009e88;
+    --bg: #F5F7FF;
+    --dark: #0F172A;
+    --dark2: #1E2A45;
+    --text: #2d3748;
+    --text-muted: #718096;
+    --white: #ffffff;
+    --card-bg: rgba(255,255,255,0.85);
+    --glass: rgba(255,255,255,0.15);
+    --shadow: 0 8px 32px rgba(91,95,239,0.12);
+    --shadow-lg: 0 20px 60px rgba(0,0,0,0.15);
+    --radius: 16px;
+    --radius-lg: 24px;
+    --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text); overflow-x:hidden; }
+
+  /* Scroll progress */
+  #progress-bar { position:fixed; top:0; left:0; height:3px; background:linear-gradient(90deg,var(--primary),var(--teal)); width:0%; z-index:9999; transition:width 0.1s; }
+
+  /* Navbar */
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    padding:16px 5%;
+    display:flex; align-items:center; justify-content:space-between;
+    backdrop-filter:blur(20px);
+    background:rgba(245,247,255,0.88);
+    border-bottom:1px solid rgba(91,95,239,0.12);
+    transition:var(--transition);
+  }
+  nav.scrolled { padding:10px 5%; box-shadow:0 4px 30px rgba(91,95,239,0.1); }
+  .nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+  .nav-logo-icon { width:44px; height:44px; background:linear-gradient(135deg,var(--primary),var(--teal)); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:20px; color:#fff; }
+  .nav-logo-text { font-family:'Playfair Display',serif; font-weight:700; font-size:1.1rem; color:var(--dark); line-height:1.2; }
+  .nav-logo-text span { display:block; font-family:'DM Sans',sans-serif; font-weight:400; font-size:0.72rem; color:var(--text-muted); }
+  .nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
+  .nav-links a { text-decoration:none; color:var(--text); font-size:0.9rem; font-weight:500; transition:var(--transition); }
+  .nav-links a:hover { color:var(--primary); }
+  .nav-cta { background:linear-gradient(135deg,var(--primary),var(--teal)); color:#fff; padding:10px 22px; border-radius:50px; font-weight:600; font-size:0.88rem; text-decoration:none; transition:var(--transition); box-shadow:0 4px 15px rgba(91,95,239,0.3); }
+  .nav-cta:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(91,95,239,0.4); }
+  .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+  .hamburger span { width:24px; height:2px; background:var(--dark); border-radius:2px; transition:var(--transition); }
+  .mobile-menu { display:none; position:fixed; top:73px; left:0; right:0; background:rgba(245,247,255,0.97); backdrop-filter:blur(20px); padding:20px 5%; flex-direction:column; gap:20px; z-index:999; border-bottom:1px solid rgba(91,95,239,0.1); }
+  .mobile-menu.open { display:flex; }
+  .mobile-menu a { color:var(--text); text-decoration:none; font-weight:500; font-size:1rem; }
+
+  /* Hero */
+  .hero {
+    min-height:100vh; position:relative; display:flex; align-items:center;
+    background: linear-gradient(135deg, #0F172A 0%, #1a1f4e 40%, #1a3a4e 100%);
+    overflow:hidden;
+    padding:100px 5% 60px;
+  }
+  .hero-bg-shapes { position:absolute; inset:0; pointer-events:none; }
+  .hero-shape { position:absolute; border-radius:50%; filter:blur(80px); opacity:0.25; animation:float 8s ease-in-out infinite alternate; }
+  .hs1 { width:500px; height:500px; background:var(--primary); top:-100px; right:-100px; animation-delay:0s; }
+  .hs2 { width:400px; height:400px; background:var(--teal); bottom:-80px; left:-80px; animation-delay:-3s; }
+  .hs3 { width:250px; height:250px; background:#9333ea; top:40%; left:30%; animation-delay:-5s; }
+  @keyframes float { 0%{transform:translate(0,0) scale(1);} 100%{transform:translate(30px,30px) scale(1.05);} }
+  .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; max-width:1400px; margin:0 auto; position:relative; z-index:1; width:100%; }
+  .hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#a5b4fc; padding:8px 16px; border-radius:50px; font-size:0.8rem; font-weight:500; margin-bottom:24px; backdrop-filter:blur(10px); }
+  .hero-badge i { color:var(--teal); }
+  .hero-title { font-family:'Playfair Display',serif; font-size:clamp(2.2rem,4vw,3.4rem); font-weight:800; color:#fff; line-height:1.2; margin-bottom:20px; }
+  .hero-title .accent { color:var(--teal); }
+  .hero-sub { color:rgba(255,255,255,0.7); font-size:1.05rem; line-height:1.7; margin-bottom:36px; max-width:520px; }
+  .hero-btns { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:48px; }
+  .btn-primary { background:linear-gradient(135deg,var(--primary),var(--teal)); color:#fff; padding:14px 28px; border-radius:50px; font-weight:600; font-size:0.95rem; text-decoration:none; display:inline-flex; align-items:center; gap:10px; transition:var(--transition); box-shadow:0 8px 25px rgba(91,95,239,0.4); }
+  .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 35px rgba(91,95,239,0.5); }
+  .btn-outline { background:rgba(255,255,255,0.1); color:#fff; padding:14px 28px; border-radius:50px; font-weight:600; font-size:0.95rem; text-decoration:none; display:inline-flex; align-items:center; gap:10px; border:1.5px solid rgba(255,255,255,0.3); backdrop-filter:blur(10px); transition:var(--transition); }
+  .btn-outline:hover { background:rgba(255,255,255,0.2); transform:translateY(-3px); }
+  .trust-badges { display:flex; flex-wrap:wrap; gap:12px; }
+  .trust-badge { display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.85); padding:8px 14px; border-radius:10px; font-size:0.8rem; font-weight:500; }
+  .trust-badge i { color:var(--teal); font-size:0.9rem; }
+  .hero-visual { position:relative; display:flex; justify-content:center; }
+  .hero-img-wrapper { position:relative; border-radius:var(--radius-lg); overflow:hidden; box-shadow:0 30px 80px rgba(0,0,0,0.5); border:2px solid rgba(255,255,255,0.1); }
+  .hero-img-wrapper img { width:100%; max-width:520px; height:420px; object-fit:cover; display:block; }
+  .hero-stat-card { position:absolute; background:rgba(15,23,42,0.85); backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.12); padding:14px 20px; border-radius:14px; color:#fff; }
+  .hsc1 { bottom:-20px; left:-30px; }
+  .hsc2 { top:-20px; right:-30px; }
+  .hero-stat-card .num { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; color:var(--teal); }
+  .hero-stat-card .label { font-size:0.75rem; color:rgba(255,255,255,0.6); }
+
+  /* Sections */
+  section { padding:90px 5%; }
+  .container { max-width:1300px; margin:0 auto; }
+  .section-label { display:inline-block; font-size:0.78rem; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--primary); background:rgba(91,95,239,0.1); padding:6px 16px; border-radius:50px; margin-bottom:16px; }
+  .section-title { font-family:'Playfair Display',serif; font-size:clamp(2rem,3.5vw,2.8rem); font-weight:700; color:var(--dark); line-height:1.3; margin-bottom:16px; }
+  .section-sub { color:var(--text-muted); font-size:1rem; line-height:1.7; max-width:600px; }
+  .text-center { text-align:center; }
+  .text-center .section-sub { margin:0 auto; }
+
+  /* About */
+  .about { background:#fff; }
+  .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; }
+  .about-img { position:relative; }
+  .about-img img { width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); }
+  .about-badge { position:absolute; bottom:-20px; right:-20px; background:linear-gradient(135deg,var(--primary),var(--teal)); color:#fff; padding:20px 24px; border-radius:var(--radius); box-shadow:var(--shadow); }
+  .about-badge .big { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; }
+  .about-badge .sm { font-size:0.75rem; opacity:0.85; }
+  .about-points { list-style:none; margin-top:28px; display:flex; flex-direction:column; gap:14px; }
+  .about-points li { display:flex; align-items:flex-start; gap:12px; }
+  .about-points li i { color:var(--teal); margin-top:3px; font-size:1rem; }
+  .about-points li span { font-size:0.95rem; color:var(--text); line-height:1.6; }
+
+  /* Rooms */
+  .rooms { background:var(--bg); }
+  .rooms-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:28px; margin-top:50px; }
+  .room-card { background:var(--card-bg); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow); border:1px solid rgba(91,95,239,0.08); transition:var(--transition); cursor:pointer; }
+  .room-card:hover { transform:translateY(-8px); box-shadow:0 30px 70px rgba(91,95,239,0.2); border-color:var(--primary); }
+  .room-img { height:200px; overflow:hidden; position:relative; }
+  .room-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s; }
+  .room-card:hover .room-img img { transform:scale(1.08); }
+  .room-tag { position:absolute; top:14px; left:14px; background:linear-gradient(135deg,var(--primary),var(--teal)); color:#fff; padding:5px 12px; border-radius:50px; font-size:0.75rem; font-weight:600; }
+  .room-body { padding:24px; }
+  .room-name { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700; margin-bottom:6px; color:var(--dark); }
+  .room-price { font-size:0.85rem; color:var(--text-muted); margin-bottom:16px; }
+  .room-price strong { font-size:1.4rem; color:var(--primary); font-family:'Playfair Display',serif; }
+  .room-features { list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }
+  .room-features li { display:flex; align-items:center; gap:9px; font-size:0.85rem; color:var(--text); }
+  .room-features li i { color:var(--teal); font-size:0.8rem; }
+  .btn-enquire { width:100%; background:linear-gradient(135deg,var(--primary),var(--teal)); color:#fff; border:none; padding:12px; border-radius:10px; font-weight:600; font-size:0.9rem; cursor:pointer; transition:var(--transition); }
+  .btn-enquire:hover { opacity:0.9; transform:translateY(-1px); }
+
+  /* Amenities */
+  .amenities { background:#fff; }
+  .amenities-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:24px; margin-top:50px; }
+  .amenity-card { background:var(--bg); border-radius:var(--radius); padding:28px 20px; text-align:center; border:1px solid rgba(91,95,239,0.08); transition:var(--transition); cursor:default; }
+  .amenity-card:hover { background:#fff; box-shadow:var(--shadow); transform:translateY(-5px); border-color:rgba(91,95,239,0.2); }
+  .amenity-icon { width:60px; height:60px; background:linear-gradient(135deg,rgba(91,95,239,0.1),rgba(0,191,166,0.1)); border-radius:16px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-size:1.5rem; color:var(--primary); transition:var(--transition); }
+  .amenity-card:hover .amenity-icon { background:linear-gradient(135deg,var(--primary),var(--teal)); color:#fff; transform:scale(1.1); }
+  .amenity-name { font-weight:600; font-size:0.88rem; color:var(--dark); }
+
+  /* Food */
+  .food { background:var(--bg); }
+  .food-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+  .food-img img { width:100%; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); }
+  .food-tag { display:inline-flex; align-items:center; gap:8px; margin-bottom:12px; }
+  .menu-table { width:100%; border-collapse:separate; border-spacing:0 8px; margin-top:20px; }
+  .menu-table th { background:linear-gradient(135deg,var(--primary),var(--teal)); color:#fff; padding:10px 14px; font-size:0.82rem; font-weight:600; }
+  .menu-table th:first-child { border-radius:8px 0 0 8px; }
+  .menu-table th:last-child { border-radius:0 8px 8px 0; }
+  .menu-table td { background:#fff; padding:10px 14px; font-size:0.82rem; color:var(--text); }
+  .menu-table td:first-child { border-radius:8px 0 0 8px; font-weight:600; color:var(--primary); }
+  .menu-table td:last-child { border-radius:0 8px 8px 0; }
+
+  /* Safety */
+  .safety { background:linear-gradient(135deg,var(--dark) 0%,var(--dark2) 100%); position:relative; overflow:hidden; }
+  .safety::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%235B5FEF' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+  .safety .container { position:relative; z-index:1; }
+  .safety .section-title { color:#fff; }
+  .safety .section-sub { color:rgba(255,255,255,0.6); }
+  .safety .section-label { background:rgba(91,95,239,0.25); color:#a5b4fc; }
+  .safety-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:24px; margin-top:50px; }
+  .safety-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius); padding:30px 24px; transition:var(--transition); }
+  .safety-card:hover { background:rgba(255,255,255,0.09); border-color:rgba(91,95,239,0.4); transform:translateY(-5px); }
+  .safety-icon { width:56px; height:56px; background:linear-gradient(135deg,var(--primary),var(--teal)); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#fff; margin-bottom:18px; }
+  .safety-title { font-weight:600; font-size:1rem; color:#fff; margin-bottom:8px; }
+  .safety-desc { font-size:0.85rem; color:rgba(255,255,255,0.55); line-height:1.6; }
+
+  /* Gallery */
+  .gallery { background:#fff; }
+  .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:50px; }
+  .gallery-item { border-radius:var(--radius); overflow:hidden; position:relative; cursor:pointer; }
+  .gallery-item.tall { grid-row:span 2; }
+  .gallery-item img { width:100%; height:220px; object-fit:cover; display:block; transition:transform 0.5s; }
+  .gallery-item.tall img { height:100%; }
+  .gallery-overlay { position:absolute; inset:0; background:linear-gradient(135deg,rgba(91,95,239,0.7),rgba(0,191,166,0.7)); opacity:0; display:flex; align-items:center; justify-content:center; transition:var(--transition); }
+  .gallery-item:hover .gallery-overlay { opacity:1; }
+  .gallery-item:hover img { transform:scale(1.1); }
+  .gallery-overlay i { color:#fff; font-size:2rem; }
+  .gallery-label { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,0.6)); color:#fff; padding:14px 16px 12px; font-size:0.8rem; font-weight:500; }
+
+  /* Lightbox */
+  .lightbox { position:fixed; inset:0; background:rgba(0,0,0,0.92); z-index:9000; display:none; align-items:center; justify-content:center; }
+  .lightbox.active { display:flex; }
+  .lightbox img { max-width:90vw; max-height:85vh; border-radius:12px; }
+  .lightbox-close { position:absolute; top:20px; right:24px; color:#fff; font-size:2rem; cursor:pointer; background:none; border:none; }
+
+  /* Testimonials */
+  .testimonials { background:var(--bg); }
+  .testi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:28px; margin-top:50px; }
+  .testi-card { background:#fff; border-radius:var(--radius-lg); padding:30px; box-shadow:var(--shadow); border:1px solid rgba(91,95,239,0.06); position:relative; transition:var(--transition); }
+  .testi-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+  .testi-quote { font-size:3rem; color:var(--primary); opacity:0.15; font-family:Georgia,serif; position:absolute; top:16px; right:20px; line-height:1; }
+  .stars { color:#f59e0b; font-size:0.85rem; margin-bottom:14px; }
+  .testi-text { font-size:0.93rem; line-height:1.7; color:var(--text); margin-bottom:20px; font-style:italic; }
+  .testi-author { display:flex; align-items:center; gap:12px; }
+  .testi-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--teal)); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:1rem; }
+  .testi-name { font-weight:600; font-size:0.9rem; color:var(--dark); }
+  .testi-role { font-size:0.78rem; color:var(--text-muted); }
+
+  /* Location */
+  .location { background:#fff; }
+  .location-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
+  .map-embed { border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-lg); border:1px solid rgba(91,95,239,0.1); }
+  .map-embed iframe { width:100%; height:380px; border:none; display:block; }
+  .location-info { display:flex; flex-direction:column; gap:20px; }
+  .loc-item { display:flex; align-items:flex-start; gap:14px; padding:18px; background:var(--bg); border-radius:var(--radius); border:1px solid rgba(91,95,239,0.06); }
+  .loc-icon { width:44px; height:44px; background:linear-gradient(135deg,var(--primary),var(--teal)); border-radius:12px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1rem; flex-shrink:0; }
+  .loc-text strong { display:block; font-size:0.9rem; color:var(--dark); margin-bottom:4px; }
+  .loc-text span { font-size:0.82rem; color:var(--text-muted); }
+  .nearby-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:8px; }
+  .nearby-badge { display:flex; align-items:center; gap:8px; background:#fff; border:1px solid rgba(91,95,239,0.1); padding:10px 14px; border-radius:10px; }
+  .nearby-badge i { color:var(--primary); font-size:0.85rem; }
+  .nearby-badge span { font-size:0.8rem; color:var(--text); font-weight:500; }
+  .dist { background:rgba(0,191,166,0.1); color:var(--teal-dark); font-size:0.7rem; padding:2px 7px; border-radius:50px; font-weight:600; margin-left:auto; }
+
+  /* Contact */
+  .contact { background:linear-gradient(135deg,var(--bg) 0%,rgba(91,95,239,0.05) 100%); }
+  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
+  .contact-form { background:#fff; border-radius:var(--radius-lg); padding:40px; box-shadow:var(--shadow); }
+  .form-title { font-family:'Playfair Display',serif; font-size:1.6rem; font-weight:700; color:var(--dark); margin-bottom:8px; }
+  .form-sub { font-size:0.88rem; color:var(--text-muted); margin-bottom:28px; }
+  .form-group { position:relative; margin-bottom:20px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width:100%; padding:14px 16px; border:1.5px solid rgba(91,95,239,0.15); border-radius:10px;
+    font-family:'DM Sans',sans-serif; font-size:0.9rem; color:var(--text); background:#fff;
+    outline:none; transition:var(--transition);
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color:var(--primary); box-shadow:0 0 0 3px rgba(91,95,239,0.1); }
+  .form-group label { position:absolute; left:14px; top:14px; font-size:0.88rem; color:var(--text-muted); pointer-events:none; transition:var(--transition); background:#fff; padding:0 4px; }
+  .form-group input:focus ~ label, .form-group input:not(:placeholder-shown) ~ label,
+  .form-group textarea:focus ~ label, .form-group textarea:not(:placeholder-shown) ~ label,
+  .form-group select:focus ~ label { top:-9px; font-size:0.75rem; color:var(--primary); }
+  .form-group textarea { height:110px; resize:vertical; }
+  .btn-submit { width:100%; background:linear-gradient(135deg,var(--primary),var(--teal)); color:#fff; border:none; padding:14px; border-radius:10px; font-weight:600; font-size:0.95rem; cursor:pointer; transition:var(--transition); font-family:'DM Sans',sans-serif; }
+  .btn-submit:hover { opacity:0.9; transform:translateY(-2px); box-shadow:0 8px 25px rgba(91,95,239,0.35); }
+  .contact-info { display:flex; flex-direction:column; gap:20px; }
+  .ci-title { font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--dark); }
+  .ci-sub { color:var(--text-muted); font-size:0.95rem; line-height:1.7; }
+  .ci-card { display:flex; align-items:flex-start; gap:14px; padding:20px; background:#fff; border-radius:var(--radius); box-shadow:var(--shadow); border:1px solid rgba(91,95,239,0.07); }
+  .ci-icon { width:48px; height:48px; background:linear-gradient(135deg,var(--primary),var(--teal)); border-radius:12px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.1rem; flex-shrink:0; }
+  .ci-text strong { display:block; font-size:0.85rem; color:var(--text-muted); margin-bottom:4px; }
+  .ci-text a, .ci-text span { display:block; font-size:1rem; font-weight:600; color:var(--dark); text-decoration:none; }
+  .ci-text a:hover { color:var(--primary); }
+  .wa-btn { display:flex; align-items:center; gap:12px; background:#25D366; color:#fff; padding:14px 24px; border-radius:12px; font-weight:600; font-size:0.95rem; text-decoration:none; transition:var(--transition); box-shadow:0 6px 20px rgba(37,211,102,0.35); }
+  .wa-btn:hover { background:#1ebe5a; transform:translateY(-2px); }
+  .call-btn { display:flex; align-items:center; gap:12px; background:var(--dark); color:#fff; padding:14px 24px; border-radius:12px; font-weight:600; font-size:0.95rem; text-decoration:none; transition:var(--transition); }
+  .call-btn:hover { background:var(--dark2); transform:translateY(-2px); }
+
+  /* Footer */
+  footer { background:var(--dark); color:rgba(255,255,255,0.7); padding:60px 5% 30px; }
+  .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:50px; max-width:1300px; margin:0 auto; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.1); }
+  .footer-brand .nav-logo-text { color:#fff; font-size:1.2rem; }
+  .footer-brand .nav-logo-text span { color:rgba(255,255,255,0.5); }
+  .footer-brand p { font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.7; margin-top:14px; max-width:280px; }
+  .footer-socials { display:flex; gap:10px; margin-top:20px; }
+  .footer-socials a { width:36px; height:36px; background:rgba(255,255,255,0.07); border-radius:8px; display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.6); text-decoration:none; transition:var(--transition); }
+  .footer-socials a:hover { background:var(--primary); color:#fff; }
+  .footer-col h4 { color:#fff; font-size:0.9rem; font-weight:600; margin-bottom:16px; }
+  .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+  .footer-col ul li a { color:rgba(255,255,255,0.5); text-decoration:none; font-size:0.83rem; transition:var(--transition); }
+  .footer-col ul li a:hover { color:var(--teal); }
+  .footer-bottom { display:flex; align-items:center; justify-content:space-between; max-width:1300px; margin:0 auto; padding-top:24px; }
+  .footer-bottom p { font-size:0.8rem; color:rgba(255,255,255,0.35); }
+  .footer-bottom a { color:var(--teal); text-decoration:none; }
+
+  /* WhatsApp FAB */
+  .wa-fab { position:fixed; bottom:28px; right:28px; z-index:900; width:58px; height:58px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.6rem; box-shadow:0 8px 25px rgba(37,211,102,0.5); text-decoration:none; transition:var(--transition); animation:pulse-wa 2s infinite; }
+  .wa-fab:hover { transform:scale(1.1); }
+  @keyframes pulse-wa { 0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,0.5);} 50%{box-shadow:0 0 0 14px rgba(37,211,102,0);} }
+
+  /* Animations */
+  .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+  .reveal-left { opacity:0; transform:translateX(-30px); transition:opacity 0.7s ease, transform 0.7s ease; }
+  .reveal-left.visible { opacity:1; transform:translateX(0); }
+  .reveal-right { opacity:0; transform:translateX(30px); transition:opacity 0.7s ease, transform 0.7s ease; }
+  .reveal-right.visible { opacity:1; transform:translateX(0); }
+
+  /* Success toast */
+  .toast { position:fixed; bottom:100px; right:28px; background:linear-gradient(135deg,var(--primary),var(--teal)); color:#fff; padding:14px 24px; border-radius:12px; font-weight:500; font-size:0.9rem; z-index:9999; transform:translateX(200px); opacity:0; transition:all 0.4s; }
+  .toast.show { transform:translateX(0); opacity:1; }
+
+  /* Responsive */
+  @media(max-width:1024px) {
+    .hero-grid, .about-grid, .food-grid, .location-grid, .contact-grid { grid-template-columns:1fr; gap:40px; }
+    .footer-grid { grid-template-columns:1fr 1fr; gap:30px; }
+    .hero-visual { display:none; }
+    .gallery-grid { grid-template-columns:repeat(2,1fr); }
+    .gallery-item.tall { grid-row:span 1; }
+    .gallery-item.tall img { height:220px; }
+  }
+  @media(max-width:768px) {
+    nav { padding:14px 5%; }
+    .nav-links, .nav-cta { display:none; }
+    .hamburger { display:flex; }
+    section { padding:60px 5%; }
+    .footer-grid { grid-template-columns:1fr; }
+    .nearby-grid { grid-template-columns:1fr; }
+    .gallery-grid { grid-template-columns:1fr 1fr; }
+    .footer-bottom { flex-direction:column; gap:8px; text-align:center; }
+    .hero-title { font-size:2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/918498958680" class="wa-fab" target="_blank" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<!-- Toast -->
+<div class="toast" id="toast"><i class="fas fa-check-circle"></i> &nbsp;Message Sent! We'll contact you soon.</div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon"><i class="fas fa-home"></i></div>
+    <div class="nav-logo-text">Sai Samyuktha <span>Ladies Hostel · Nellore</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#amenities">Amenities</a></li>
+    <li><a href="#safety">Safety</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="tel:8498958680" class="nav-cta"><i class="fas fa-phone"></i> Call Now</a>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About Us</a>
+  <a href="#rooms" onclick="toggleMenu()">Room Types</a>
+  <a href="#amenities" onclick="toggleMenu()">Amenities</a>
+  <a href="#safety" onclick="toggleMenu()">Safety</a>
+  <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="tel:8498958680" class="btn-primary" style="justify-content:center;"><i class="fas fa-phone"></i> 8498958680</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg-shapes">
+    <div class="hero-shape hs1"></div>
+    <div class="hero-shape hs2"></div>
+    <div class="hero-shape hs3"></div>
+  </div>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fas fa-award"></i> Premium Women's Accommodation in Nellore</div>
+      <h1 class="hero-title">Safe. Comfortable. <span class="accent">Premium Living</span> for Women in Nellore.</h1>
+      <p class="hero-sub">Sai Samyuktha Ladies Hostel offers a secure, hygienic, and homely living space for students and working professionals in LIC Colony, Harinathpuram, Nellore.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary"><i class="fas fa-calendar-check"></i> Book a Visit</a>
+        <a href="tel:8498958680" class="btn-outline"><i class="fas fa-phone"></i> 8498958680</a>
+      </div>
+      <div class="trust-badges">
+        <div class="trust-badge"><i class="fas fa-shield-alt"></i> 24/7 CCTV Security</div>
+        <div class="trust-badge"><i class="fas fa-utensils"></i> Food Included</div>
+        <div class="trust-badge"><i class="fas fa-wifi"></i> High-Speed WiFi</div>
+        <div class="trust-badge"><i class="fas fa-lock"></i> Women Only</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrapper">
+        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&q=80" alt="Premium Ladies Hostel Room">
+        <div class="hero-stat-card hsc1"><div class="num">150+</div><div class="label">Happy Residents</div></div>
+        <div class="hero-stat-card hsc2"><div class="num">100%</div><div class="label">Safe & Secure</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img reveal-left">
+        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Sai Samyuktha Hostel">
+        <div class="about-badge"><div class="big">5★</div><div class="sm">Premium<br>Rated Hostel</div></div>
+      </div>
+      <div class="reveal-right">
+        <div class="section-label">About Us</div>
+        <h2 class="section-title">A Home Away From Home for Women in Nellore</h2>
+        <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-bottom:20px;">Sai Samyuktha Ladies Hostel is Nellore's premium women-only accommodation facility designed especially for students and working professionals. Located in the peaceful LIC Colony, Harinathpuram, we provide a safe, hygienic, and vibrant community living experience.</p>
+        <ul class="about-points">
+          <li><i class="fas fa-check-circle"></i><span><strong>Women-Only Premises</strong> – Exclusively for female students and working professionals</span></li>
+          <li><i class="fas fa-check-circle"></i><span><strong>Prime Location</strong> – Walking distance to colleges, offices, and city centers</span></li>
+          <li><i class="fas fa-check-circle"></i><span><strong>Hygienic Kitchen</strong> – Freshly cooked nutritious meals daily</span></li>
+          <li><i class="fas fa-check-circle"></i><span><strong>Peaceful Environment</strong> – Quiet residential area ideal for study and rest</span></li>
+          <li><i class="fas fa-check-circle"></i><span><strong>Community Living</strong> – Friendly atmosphere with fellow women residents</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rooms -->
+<section class="rooms" id="rooms">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Accommodation</div>
+      <h2 class="section-title">Choose Your Perfect Room</h2>
+      <p class="section-sub">Spacious, well-furnished rooms designed for comfort, privacy, and productivity.</p>
+    </div>
+    <div class="rooms-grid">
+      <!-- Single -->
+      <div class="room-card reveal">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&q=80" alt="Single Room">
+          <div class="room-tag">Most Private</div>
+        </div>
+        <div class="room-body">
+          <div class="room-name">Single Sharing</div>
+          <div class="room-price">Starting from <strong>₹6,500</strong>/month</div>
+          <ul class="room-features">
+            <li><i class="fas fa-check"></i> Attached Bathroom</li>
+            <li><i class="fas fa-check"></i> Bed & Mattress</li>
+            <li><i class="fas fa-check"></i> Study Table & Chair</li>
+            <li><i class="fas fa-check"></i> Personal Wardrobe</li>
+            <li><i class="fas fa-check"></i> WiFi & Daily Cleaning</li>
+            <li><i class="fas fa-check"></i> Food Included</li>
+          </ul>
+          <button class="btn-enquire" onclick="scrollToContact()">Enquire Now</button>
+        </div>
+      </div>
+      <!-- Double -->
+      <div class="room-card reveal" style="transition-delay:0.1s">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&q=80" alt="Double Room">
+          <div class="room-tag" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">Most Popular</div>
+        </div>
+        <div class="room-body">
+          <div class="room-name">Double Sharing</div>
+          <div class="room-price">Starting from <strong>₹5,000</strong>/month</div>
+          <ul class="room-features">
+            <li><i class="fas fa-check"></i> Shared Bathroom</li>
+            <li><i class="fas fa-check"></i> Bed & Mattress</li>
+            <li><i class="fas fa-check"></i> Study Table & Chair</li>
+            <li><i class="fas fa-check"></i> Wardrobe Space</li>
+            <li><i class="fas fa-check"></i> WiFi & Daily Cleaning</li>
+            <li><i class="fas fa-check"></i> Food Included</li>
+          </ul>
+          <button class="btn-enquire" onclick="scrollToContact()">Enquire Now</button>
+        </div>
+      </div>
+      <!-- Triple -->
+      <div class="room-card reveal" style="transition-delay:0.2s">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=500&q=80" alt="Triple Room">
+          <div class="room-tag" style="background:linear-gradient(135deg,var(--teal),#059669)">Best Value</div>
+        </div>
+        <div class="room-body">
+          <div class="room-name">Triple Sharing</div>
+          <div class="room-price">Starting from <strong>₹4,000</strong>/month</div>
+          <ul class="room-features">
+            <li><i class="fas fa-check"></i> Shared Bathroom</li>
+            <li><i class="fas fa-check"></i> Bed & Mattress</li>
+            <li><i class="fas fa-check"></i> Study Table & Chair</li>
+            <li><i class="fas fa-check"></i> Wardrobe Space</li>
+            <li><i class="fas fa-check"></i> WiFi & Daily Cleaning</li>
+            <li><i class="fas fa-check"></i> Food Included</li>
+          </ul>
+          <button class="btn-enquire" onclick="scrollToContact()">Enquire Now</button>
+        </div>
+      </div>
+      <!-- Full Room -->
+      <div class="room-card reveal" style="transition-delay:0.3s">
+        <div class="room-img">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80" alt="Full Room">
+          <div class="room-tag" style="background:linear-gradient(135deg,#9333ea,#6366f1)">Premium</div>
+        </div>
+        <div class="room-body">
+          <div class="room-name">Full Private Room</div>
+          <div class="room-price">Starting from <strong>₹8,000</strong>/month</div>
+          <ul class="room-features">
+            <li><i class="fas fa-check"></i> Attached Bathroom</li>
+            <li><i class="fas fa-check"></i> Bed & Mattress</li>
+            <li><i class="fas fa-check"></i> Study Table & Chair</li>
+            <li><i class="fas fa-check"></i> Full Wardrobe</li>
+            <li><i class="fas fa-check"></i> WiFi & Daily Cleaning</li>
+            <li><i class="fas fa-check"></i> Food Included</li>
+          </ul>
+          <button class="btn-enquire" onclick="scrollToContact()">Enquire Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Amenities -->
+<section class="amenities" id="amenities">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Facilities</div>
+      <h2 class="section-title">World-Class Amenities</h2>
+      <p class="section-sub">Everything you need for a comfortable, safe, and productive stay.</p>
+    </div>
+    <div class="amenities-grid">
+      <div class="amenity-card reveal"><div class="amenity-icon"><i class="fas fa-video"></i></div><div class="amenity-name">24/7 CCTV Surveillance</div></div>
+      <div class="amenity-card reveal" style="transition-delay:0.05s"><div class="amenity-icon"><i class="fas fa-fingerprint"></i></div><div class="amenity-name">Biometric Entry</div></div>
+      <div class="amenity-card reveal" style="transition-delay:0.1s"><div class="amenity-icon"><i class="fas fa-wifi"></i></div><div class="amenity-name">High-Speed WiFi</div></div>
+      <div class="amenity-card reveal" style="transition-delay:0.15s"><div class="amenity-icon"><i class="fas fa-tint"></i></div><div class="amenity-name">RO Drinking Water</div></div>
+      <div class="amenity-card reveal" style="transition-delay:0.2s"><div class="amenity-icon"><i class="fas fa-bolt"></i></div><div class="amenity-name">24-Hr Power Backup</div></div>
+      <div class="amenity-card reveal" style="transition-delay:0.25s"><div class="amenity-icon"><i class="fas fa-utensils"></i></div><div class="amenity-name">Nutritious Food</div></div>
+      <div class="amenity-card reveal" style="transition-delay:0.3s"><div class="amenity-icon"><i class="fas fa-tshirt"></i></div><div class="amenity-name">Laundry Facility</div></div>
+      <div class="amenity-card reveal" style="transition-delay:0.35s"><div class="amenity-icon"><i class="fas fa-broom"></i></div><div class="amenity-name">Daily Housekeeping</div></div>
+      <div class="amenity-card reveal" style="transition-delay:0.4s"><div class="amenity-icon"><i class="fas fa-user-shield"></i></div><div class="amenity-name">Security Staff</div></div>
+      <div class="amenity-card reveal" style="transition-delay:0.45s"><div class="amenity-icon"><i class="fas fa-parking"></i></div><div class="amenity-name">Parking Available</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Food -->
+<section class="food" id="food">
+  <div class="container">
+    <div class="food-grid">
+      <div class="reveal-left">
+        <div class="section-label">Dining</div>
+        <h2 class="section-title">Hygienic & Nutritious Home-Style Food</h2>
+        <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-bottom:24px;">Our experienced kitchen team prepares freshly cooked, wholesome meals daily. We offer both vegetarian and non-vegetarian options ensuring every resident enjoys balanced nutrition.</p>
+        <table class="menu-table">
+          <thead>
+            <tr><th>Meal</th><th>Morning</th><th>Afternoon</th><th>Evening</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mon</td><td>Idli & Sambar</td><td>Rice & Dal</td><td>Chapati & Curry</td></tr>
+            <tr><td>Tue</td><td>Upma & Chutney</td><td>Rice & Rasam</td><td>Roti & Sabji</td></tr>
+            <tr><td>Wed</td><td>Dosa & Coconut Chutney</td><td>Rice & Sambar</td><td>Puri & Curry</td></tr>
+            <tr><td>Thu</td><td>Pongal & Chutney</td><td>Rice & Dal Fry</td><td>Chapati & Paneer</td></tr>
+            <tr><td>Fri</td><td>Poha & Tea</td><td>Biryani</td><td>Noodles/Fried Rice</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-top:10px;"><i class="fas fa-info-circle"></i> Menu subject to seasonal variation. Non-veg available on request.</p>
+      </div>
+      <div class="food-img reveal-right">
+        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80" alt="Nutritious Food">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Safety -->
+<section class="safety" id="safety">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Your Safety Is Our Priority</div>
+      <h2 class="section-title" style="color:#fff;">Built for Security. Designed for Trust.</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.6);">We've built multiple layers of security so you and your family can rest easy.</p>
+    </div>
+    <div class="safety-grid">
+      <div class="safety-card reveal">
+        <div class="safety-icon"><i class="fas fa-venus"></i></div>
+        <div class="safety-title">Women-Only Premises</div>
+        <div class="safety-desc">Strictly female-only accommodation. No male visitors allowed inside premises at any time.</div>
+      </div>
+      <div class="safety-card reveal" style="transition-delay:0.1s">
+        <div class="safety-icon"><i class="fas fa-video"></i></div>
+        <div class="safety-title">24/7 CCTV Monitoring</div>
+        <div class="safety-desc">High-resolution cameras monitor all entry points, corridors, and common areas round the clock.</div>
+      </div>
+      <div class="safety-card reveal" style="transition-delay:0.2s">
+        <div class="safety-icon"><i class="fas fa-sign-in-alt"></i></div>
+        <div class="safety-title">Visitor Tracking</div>
+        <div class="safety-desc">All visitors are logged at the gate with ID verification. Only approved guests allowed inside.</div>
+      </div>
+      <div class="safety-card reveal" style="transition-delay:0.3s">
+        <div class="safety-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <div class="safety-title">Emergency Support</div>
+        <div class="safety-desc">24/7 emergency contact system and first-aid facilities available on the premises.</div>
+      </div>
+      <div class="safety-card reveal" style="transition-delay:0.4s">
+        <div class="safety-icon"><i class="fas fa-door-closed"></i></div>
+        <div class="safety-title">Secure Gated Area</div>
+        <div class="safety-desc">Fully enclosed gated community with security personnel on duty at entry/exit points.</div>
+      </div>
+      <div class="safety-card reveal" style="transition-delay:0.5s">
+        <div class="safety-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="safety-title">Parent Connectivity</div>
+        <div class="safety-desc">Regular communication updates. Parents can reach management anytime for resident safety queries.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Gallery</div>
+      <h2 class="section-title">See Your New Home</h2>
+      <p class="section-sub">A glimpse into life at Sai Samyuktha Ladies Hostel.</p>
+    </div>
+    <div class="gallery-grid" style="margin-top:50px;">
+      <div class="gallery-item tall reveal" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Room">
+        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-label">Premium Rooms</div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=500&q=80" alt="Dining">
+        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-label">Dining Area</div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)" style="transition-delay:0.1s">
+        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=500&q=80" alt="Common Area">
+        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-label">Common Area</div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)" style="transition-delay:0.15s">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&q=80" alt="Kitchen">
+        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-label">Hygienic Kitchen</div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)" style="transition-delay:0.2s">
+        <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=500&q=80" alt="Bathroom">
+        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-label">Clean Bathrooms</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img src="" id="lightbox-img" alt="Gallery Image">
+</div>
+
+<!-- Testimonials -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">What They Say</div>
+      <h2 class="section-title">Trusted by Students & Professionals</h2>
+      <p class="section-sub">Hear from residents and parents who chose Sai Samyuktha.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-quote">"</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-text">Living at Sai Samyuktha has been a wonderful experience. The food is just like home, the rooms are clean, and I always feel safe here. Best decision for my college stay in Nellore!</p>
+        <div class="testi-author"><div class="testi-avatar">P</div><div><div class="testi-name">Priya Reddy</div><div class="testi-role">Engineering Student – SPSR Engineering College</div></div></div>
+      </div>
+      <div class="testi-card reveal" style="transition-delay:0.15s">
+        <div class="testi-quote">"</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-text">As a software professional, I was worried about finding safe accommodation in Nellore. Sai Samyuktha gave me peace of mind with great WiFi, cozy rooms, and 24/7 security. Highly recommended!</p>
+        <div class="testi-author"><div class="testi-avatar">A</div><div><div class="testi-name">Anitha Kumari</div><div class="testi-role">Software Engineer – IT Company, Nellore</div></div></div>
+      </div>
+      <div class="testi-card reveal" style="transition-delay:0.3s">
+        <div class="testi-quote">"</div>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testi-text">As a parent, my daughter's safety is my top priority. The management is very responsive, CCTV coverage is excellent, and the food quality is superb. I'm 100% confident leaving my daughter here.</p>
+        <div class="testi-author"><div class="testi-avatar">S</div><div><div class="testi-name">Sunitha Rao</div><div class="testi-role">Parent – Resident's Mother, Ongole</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Location -->
+<section class="location" id="location">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:50px;">
+      <div class="section-label">Location</div>
+      <h2 class="section-title">Perfectly Located in Nellore</h2>
+      <p class="section-sub">Strategically situated for easy access to colleges, offices, and city amenities.</p>
+    </div>
+    <div class="location-grid">
+      <div class="map-embed reveal-left">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15348.45!2d79.9800!3d14.4426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c8ce75e17f3d5%3A0x23a7d8ef9fc6e0f2!2sLIC%20Colony%2C%20Nellore%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1693000000000" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="location-info reveal-right">
+        <div class="loc-item">
+          <div class="loc-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="loc-text"><strong>Our Address</strong><span>Rd Number 4, LIC Colony, Harinathpuram<br>Nellore, Andhra Pradesh – 524003</span></div>
+        </div>
+        <div class="loc-item">
+          <div class="loc-icon"><i class="fas fa-phone"></i></div>
+          <div class="loc-text"><strong>Contact Number</strong><a href="tel:8498958680">+91 8498958680</a></div>
+        </div>
+        <div class="loc-item">
+          <div class="loc-icon"><i class="fas fa-map"></i></div>
+          <div class="loc-text" style="width:100%;">
+            <strong>Nearby Landmarks</strong>
+            <div class="nearby-grid" style="margin-top:12px;">
+              <div class="nearby-badge"><i class="fas fa-university"></i><span>SPSR Nandanam Engineering</span><span class="dist">3km</span></div>
+              <div class="nearby-badge"><i class="fas fa-train"></i><span>Nellore Railway Station</span><span class="dist">4km</span></div>
+              <div class="nearby-badge"><i class="fas fa-bus"></i><span>LIC Colony Bus Stop</span><span class="dist">0.3km</span></div>
+              <div class="nearby-badge"><i class="fas fa-briefcase"></i><span>IT & Office Areas</span><span class="dist">2km</span></div>
+              <div class="nearby-badge"><i class="fas fa-hospital"></i><span>SVRO Hospital</span><span class="dist">2.5km</span></div>
+              <div class="nearby-badge"><i class="fas fa-shopping-bag"></i><span>City Shopping Areas</span><span class="dist">3km</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-form reveal-left">
+        <div class="form-title">Book a Free Visit</div>
+        <div class="form-sub">Fill the form and we'll call you back within 30 minutes.</div>
+        <div class="form-group">
+          <input type="text" id="fname" placeholder=" ">
+          <label>Full Name *</label>
+        </div>
+        <div class="form-group">
+          <input type="tel" id="fphone" placeholder=" ">
+          <label>Phone Number *</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="femail" placeholder=" ">
+          <label>Email Address</label>
+        </div>
+        <div class="form-group">
+          <select id="froom">
+            <option value="">Select Room Type</option>
+            <option>Single Sharing</option>
+            <option>Double Sharing</option>
+            <option>Triple Sharing</option>
+            <option>Full Private Room</option>
+          </select>
+          <label style="top:-9px;font-size:0.75px;color:var(--text-muted);"></label>
+        </div>
+        <div class="form-group">
+          <textarea id="fmsg" placeholder=" "></textarea>
+          <label>Message / Move-in Date</label>
+        </div>
+        <button class="btn-submit" onclick="submitForm()"><i class="fas fa-paper-plane"></i> &nbsp;Send Enquiry</button>
+      </div>
+      <div class="contact-info reveal-right">
+        <div class="section-label">Get In Touch</div>
+        <div class="ci-title">We're Here to Help</div>
+        <p class="ci-sub" style="margin:12px 0 28px;">Reach out via call, WhatsApp, or fill the form. We respond within 30 minutes during business hours.</p>
+        <div class="ci-card">
+          <div class="ci-icon"><i class="fas fa-phone"></i></div>
+          <div class="ci-text"><strong>Call Us Directly</strong><a href="tel:8498958680">+91 84989 58680</a></div>
+        </div>
+        <div class="ci-card" style="margin-top:16px;">
+          <div class="ci-icon" style="background:#25D366;"><i class="fab fa-whatsapp"></i></div>
+          <div class="ci-text"><strong>WhatsApp</strong><a href="https://wa.me/918498958680" target="_blank">+91 84989 58680</a></div>
+        </div>
+        <div class="ci-card" style="margin-top:16px;">
+          <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="ci-text"><strong>Address</strong><span>Rd Number 4, LIC Colony, Harinathpuram, Nellore – 524003</span></div>
+        </div>
+        <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;">
+          <a href="https://wa.me/918498958680" class="wa-btn" target="_blank"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+          <a href="tel:8498958680" class="call-btn"><i class="fas fa-phone"></i> Call Now</a>
+        </div>
+        <div style="margin-top:24px;background:rgba(91,95,239,0.08);border:1px solid rgba(91,95,239,0.15);border-radius:var(--radius);padding:18px;">
+          <p style="font-size:0.85rem;color:var(--primary);font-weight:600;margin-bottom:6px;"><i class="fas fa-clock"></i> Response Time</p>
+          <p style="font-size:0.82rem;color:var(--text-muted);">Mon – Sat: 8:00 AM – 8:00 PM<br>Sunday: 9:00 AM – 5:00 PM<br>Emergency: 24/7 available</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" style="margin-bottom:0;">
+        <div class="nav-logo-icon"><i class="fas fa-home"></i></div>
+        <div class="nav-logo-text">Sai Samyuktha <span>Ladies Hostel · Nellore</span></div>
+      </a>
+      <p>Premium women-only accommodation in LIC Colony, Harinathpuram, Nellore. Safe, hygienic, and affordable living for students and working professionals.</p>
+      <div class="footer-socials">
+        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/918498958680" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:8498958680" title="Phone"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#rooms">Room Types</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#food">Food & Dining</a></li>
+        <li><a href="#safety">Safety</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Amenities</h4>
+      <ul>
+        <li><a href="#">24/7 CCTV</a></li>
+        <li><a href="#">High-Speed WiFi</a></li>
+        <li><a href="#">RO Water</a></li>
+        <li><a href="#">Power Backup</a></li>
+        <li><a href="#">Daily Meals</a></li>
+        <li><a href="#">Laundry</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:8498958680"><i class="fas fa-phone" style="margin-right:6px;color:var(--teal)"></i>8498958680</a></li>
+        <li><a href="https://wa.me/918498958680"><i class="fab fa-whatsapp" style="margin-right:6px;color:#25D366"></i>WhatsApp</a></li>
+        <li><a href="#location"><i class="fas fa-map-marker-alt" style="margin-right:6px;color:var(--primary)"></i>Nellore, AP 524003</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Sai Samyuktha Ladies Hostel – All Rights Reserved</p>
+    <p>Designed with <i class="fas fa-heart" style="color:#ef4444;"></i> for Women's Safety & Comfort</p>
+  </div>
+</footer>
+
+<script>
+// Progress Bar
+window.addEventListener('scroll',()=>{
+  const el = document.getElementById('progress-bar');
+  const h = document.documentElement;
+  const pct = (h.scrollTop/(h.scrollHeight-h.clientHeight))*100;
+  el.style.width = pct+'%';
+  // Navbar
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('scrolled', h.scrollTop>50);
+});
+
+// Mobile menu
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// Scroll to Contact
+function scrollToContact(){
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+}
+
+// Scroll Reveal
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+    }
+  });
+},{threshold:0.12});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>observer.observe(el));
+
+// Gallery Lightbox
+function openLightbox(el){
+  const img = el.querySelector('img');
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow='';
+}
+
+// Form submit
+function submitForm(){
+  const name = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('fphone').value.trim();
+  if(!name || !phone){ alert('Please fill in your name and phone number.'); return; }
+  const toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'),4000);
+  document.getElementById('fname').value='';
+  document.getElementById('fphone').value='';
+  document.getElementById('femail').value='';
+  document.getElementById('fmsg').value='';
+}
+
+// Close mobile menu on scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('mobileMenu').classList.remove('open');
+});
+</script>
+</body>
+</html>
